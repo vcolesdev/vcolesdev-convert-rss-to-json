@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Convert RSS Feeds to JSON</title>
+  </head>
+  <body>
+    <header>
+      <h1>Vcolesdev - Convert RSS to JSON</h1>
+    </header>
+    <main>
+      <section>
+        <p>Convert RSS feeds to JSON</p>
+        <h2>Example</h2>
+        <p>Link to converted RSS feed from NASA website:</p>
+        <p>Link: <a href="http://localhost:9000/api/test/nasa" target="_blank">Link to NASA Feed</a></p>
+        <p><strong>Route:</strong> http://localhost:9000/api/test/nasa</p>
+      </section>
+      <form action="api/rss-to-json-converter" enctype="multipart/form-data" id="formConvertRssToJson" method="GET">
+        <h2>Form</h2>
+        <fieldset>
+          <p>Enter a valid URL to an RSS feed to convert to JSON.</p>
+          <div>
+            <label for="fc_rssFeedUrl">RSS Feed URL</label>
+          </div>
+          <div>
+            <input
+                    id="fc_rssFeedUrl"
+                    name="rss_feed_url"
+                    placeholder="https://example.com/feed.xml"
+                    type="url"
+                    required
+            />
+          </div>
+          <div>
+            <button
+                    form="formConvertRssToJson"
+                    id="btnConvertRssToJson"
+                    type="submit"
+            >
+              Convert to JSON
+            </button>
+          </div>
+          <div>
+            <label for="cb_downloadFile">
+              <input
+                      id="cb_downloadFile"
+                      name="download_file"
+                      type="checkbox"
+              />
+              <span>&nbsp;</span> Download File to Local Machine
+            </label>
+          </div>
+        </fieldset>
+      </form>
+    </main>
+    <footer>
+      <p>&copy; 2024 vcolesdev | License: MIT</p>
+    </footer>
+  </body>
+</html>
